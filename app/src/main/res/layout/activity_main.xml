@@ -6,45 +6,110 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editX"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="X"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/lightView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Light Sensor Value:"
+        app:layout_constraintBottom_toTopOf="@+id/lightValue"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.239" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editY"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
+        android:id="@+id/lightValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
         android:ems="10"
         android:inputType="text"
-        android:hint="Y"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editZ"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toEndOf="@+id/editX"
+        app:layout_constraintBottom_toTopOf="@+id/temperatureValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.239" />
+        app:layout_constraintVertical_bias="0.903" />
+
+    <TextView
+        android:id="@+id/temperatureView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature Sensor Value"
+        app:layout_constraintBottom_toTopOf="@+id/temperatureValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lightValue"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editZ"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:id="@+id/temperatureValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
         android:ems="10"
         android:inputType="text"
-        android:hint="Z"
+        app:layout_constraintBottom_toTopOf="@+id/humidityValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/humidityView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Humidity Sensor Value:"
+        app:layout_constraintBottom_toTopOf="@+id/humidityValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureValue"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/humidityValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/pressureValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/pressureView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pressure Sensor Value:"
+        app:layout_constraintBottom_toTopOf="@+id/pressureValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humidityValue"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/pressureValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:ems="10"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.239" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/getGPSBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS"
+        android:layout_centerInParent="true"
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
